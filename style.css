@@ -1,0 +1,199 @@
+/* RESET GENERAL */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: url('assets/fondooo.jpg'); /* Fondo de pantalla */
+  background-size: cover;       /* La imagen cubre toda la pantalla */
+  background-repeat: no-repeat; /* Evita que se repita */
+  background-position: center;  /* Centra la imagen */
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+  background: red; /* Barra de navegación roja */
+  color: white;
+  padding: 15px 0;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  animation: fadeDown 1s ease-in-out;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navbar .container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: white; /* Título "Nuestro Equipo" en blanco */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #90caf9;
+}
+
+/* SECCIÓN EQUIPO */
+.equipo {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.equipo h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: red; /* Subtítulo "Conocé a nuestro equipo" en rojo */
+}
+
+/* TÍTULO CON ANIMACIÓN LENTA */
+.titulo-animado {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: aparecerLento 2.5s ease forwards;
+}
+
+@keyframes aparecerLento {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CONTENEDOR DE MIEMBROS */
+.miembros {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+/* TARJETA DE MIEMBRO */
+.miembro {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 280px;
+  transition: transform 0.3s ease;
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+}
+
+.miembro:nth-child(1) {
+  animation-delay: 0.3s;
+}
+.miembro:nth-child(2) {
+  animation-delay: 0.6s;
+}
+.miembro:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
+.miembro a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.miembro img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.miembro:hover img {
+  transform: scale(1.1);
+}
+
+.miembro h3 {
+  font-size: 1.4rem;
+  margin-top: 15px;
+}
+
+.miembro p {
+  color: #555;
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+/* FOOTER */
+footer {
+  background: red; /* Footer rojo */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+/* ANIMACIONES GENERALES */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.presentacion dejoa {
+  width: 80%;
+  max-width: 900px;
+  margin: 50px auto;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.presentacion p {
+  text-align: justify;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
